@@ -28,3 +28,11 @@ ADD ./templates /templates/
 EXPOSE 8080
 CMD ["/main"]
 ```
+
++ Run the docker container
+
+```bash
+sudo docker build -t <name>:latest .
+
+sudo docker run -v /var/log:/log --name <name> --restart=always -itd -p 8080:8080 <name>
+```
