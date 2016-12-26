@@ -13,6 +13,12 @@ rm ./main
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
 ```
 
++ Upload the binary to server
+
+```bash
+scp ./main  ubuntu@<server>:<path>
+```
+
 + Build the docker images
 
 ```Dockerfile
