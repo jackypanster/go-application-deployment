@@ -16,6 +16,9 @@ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
 + Upload the binary to server
 
 ```bash
+ssh-copy-id ubuntu@<server>
+# or
+cat ~/.ssh/id_rsa.pub | ssh -i <file.pem> ubuntu@<server> "cat - >> ~/.ssh/authorized_keys"
 scp ./main  ubuntu@<server>:<path>
 ```
 
